@@ -44,10 +44,8 @@ func InitializeDataBase() {
 		log.Fatal(errMessageStart, err)
 	}
 
-	err = Database.AutoMigrate(&models.Product{}, &models.User{}, &models.Product{}, &models.Category{}, &models.M5{})
+	err = Database.AutoMigrate(&models.Product{}, &models.User{})
 	if err != nil {
 		log.Fatal(errMessageStart, err)
 	}
-	//createProducts()
-	//createUsers()
 }
